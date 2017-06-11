@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
 
 class DetalheCarro extends Component{
+
+    voltarParaGrid(event){
+        this.props.voltarParaGrid(event);
+    }
+
     render(){
         return( 
             <div className="col-p-10 col-m-10 col-g-10" style={{display: 'inline-grid'}}>
+                <button className="btn btn-primary" 
+                        style={{width: 100 + 'px',margin: 5 + 'px'}}
+                        onClick={this.voltarParaGrid.bind(this)}
+                        title="Voltar para a lista de carros"> Voltar 
+                </button>
                 <div className="panel panel-primary">
                     <div className="panel-heading">
                         <h3 className="panel-title">Detalhes {this.props.fabricante + ' ' + this.props.nome}</h3>

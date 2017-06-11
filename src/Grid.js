@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import CarroCard from './CarroCard';
-import jQuery from 'jquery';
 
 class Grid extends Component {
-
-    constructor(){
-		super();
-		//this.state = { carros: [] };
-    }
 
     render(){
         const carrosCardArray = this.getCarrosCardArray();
@@ -17,23 +11,26 @@ class Grid extends Component {
             //Adiciona a cada 4 carros uma div com clear : both, para não quebrar se um dos cards tiver
             //uma altura maior
             if((i % 3) === 2){
-                gridElements.push(<div style={{clear: 'both'}}></div>);
+                gridElements.push(<div key={'divAjusteGrid' + i} style={{clear: 'both'}}></div>);
             }
         }
 
         return(
             <div>
                 {gridElements}
+                <div style={{clear: 'both'}}> </div>
             </div>
         );
     }
 
     getCarrosCardArray(){
         return this.props.carros.map(
-                carro=><CarroCard detalharCarro={this.detalharCarro.bind(this)}
-                        key={carro.id} fabricante={carro.fabricante} carro={carro}
-                        imagem={carro.imagem} nome={carro.nome} 
-                        motorizacao='1.0' potencia='100 cv' 
+                carro=><CarroCard 
+                            detalharCarro={this.detalharCarro.bind(this)}
+                            removerCarro={this.removerCarro.bind(this)}
+                            key={carro.id} fabricante={carro.fabricante} carro={carro}
+                            imagem={carro.imagem} nome={carro.nome} 
+                            motorizacao={carro.motorizacao} potencia={carro.potencia} 
                         />
                 );
     }
@@ -42,6 +39,9 @@ class Grid extends Component {
         this.props.detalharCarro(carro);
 	}
 
+   	removerCarro (carro) {
+        this.props.removerCarro(carro);
+	}
 }
 
 export default Grid;
