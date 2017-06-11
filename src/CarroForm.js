@@ -40,9 +40,14 @@ class CarroForm extends Component{
                                 <td>Entre-eixos</td>
                                 <td><input type="text" className="form-control" ref={input=>this.entreeixos=input}/></td>
                             </tr>
-                            
+                            <tr>
+                                <td>Imagem</td>
+                                <td><input type="text" className="form-control" ref={input=>this.imagem=input}/></td>
+                            </tr>                            
                         </tbody>
                         </table>
+                        <input type="submit" value="Salvar" className="btn btn-primary"/>
+                        <button title="Cancelar" className="btn btn-primary" style={{marginLeft: 8 + 'px'}}>Cancelar</button>
                         </form>                                        
                     </div>
                 </div>
@@ -59,7 +64,8 @@ class CarroForm extends Component{
         let comprimento = this.comprimento.value;
         let largura = this.largura.value;
         let entreeixos = this.entreeixos.value;
-        this.props.adicionarCarro(fabricante,nome,motorizacao,potencia,comprimento,largura,entreeixos);
+        let imagem = this.imagem.value;
+        this.props.adicionarCarro(fabricante,nome,motorizacao,potencia,comprimento,largura,entreeixos, imagem);
     }
 
 }

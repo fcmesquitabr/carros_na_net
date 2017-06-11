@@ -4,22 +4,9 @@ import jQuery from 'jquery';
 
 class Grid extends Component {
 
-    componentWillMount(){
-		this.buscarCarros();
-	}
-
-	buscarCarros(){
-		jQuery.ajax(
-		{
-			method:'GET',
-			url:'http://localhost:3001/carros/',
-			success:(carros)=>{this.setState({carros})}
-		});
-	}
-
     constructor(){
 		super();
-		this.state = { carros: [] };
+		//this.state = { carros: [] };
     }
 
     render(){
@@ -42,7 +29,7 @@ class Grid extends Component {
     }
 
     getCarrosCardArray(){
-        return this.state.carros.map(
+        return this.props.carros.map(
                 carro=><CarroCard detalharCarro={this.detalharCarro.bind(this)}
                         key={carro.id} fabricante={carro.fabricante} carro={carro}
                         imagem={carro.imagem} nome={carro.nome} 
