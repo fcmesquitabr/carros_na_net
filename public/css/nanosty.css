@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto|Slabo+27px');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Merriweather, Roboto, SlaboArial, Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+.panel-body {
+  padding: 15px;
+}
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
+}
+.panel-primary {
+  border-color: #337ab7;
+}
+.panel-primary > .panel-heading {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+.row {
+  display: block;
+}
+
+.col-p-1, .col-m-1, .col-g-1,
+.col-p-2, .col-m-2, .col-g-2,
+.col-p-3, .col-m-3, .col-g-3,
+.col-p-4, .col-m-4, .col-g-4,
+.col-p-5, .col-m-5, .col-g-5,
+.col-p-6, .col-m-6, .col-g-6,
+.col-p-7, .col-m-7, .col-g-7,
+.col-p-8, .col-m-8, .col-g-8,
+.col-p-9, .col-m-9, .col-g-9,
+.col-p-10, .col-m-10, .col-g-10 {
+  display: inline-block;
+  position: relative;
+  min-height: 1px;
+  padding: 0 10px;
+  float: left;
+}
+
+.col-p-10, .col-m-10, .col-g-10 {
+  width: 100%;
+}
+.col-p-9, .col-m-9, .col-g-9 {
+  width: 83.33333%;
+}
+.col-p-8, .col-m-8, .col-g-8 {
+  width: 80%;
+}
+.col-p-7, .col-m-7, .col-g-7 {
+  width: 75%;
+}
+.col-p-6, .col-m-6, .col-g-6 {
+  width: 66.66667%;
+}
+.col-p-5, .col-m-5, .col-g-5 {
+  width: 50%;
+}
+.col-p-4, .col-m-4, .col-g-4 {
+  width: 33.33333%;
+}
+.col-p-3, .col-m-3, .col-g-3 {
+  width: 25%;
+}
+.col-p-2, .col-m-2, .col-g-2 {
+  width: 20%;
+}
+.col-p-1, .col-m-1, .col-g-1 {
+  width: 16.66667%;
+}
+
+p { text-indent: 20px; text-align: justify; margin-top: 10px; }
+
+nav { width: 100%; }
+
+nav ul { list-style-type: none; }
+
+nav ul li a { display: block; text-decoration: underline; text-align: center; word-wrap: break-word; }
+
+nav.horizontal ul li a { display: inline-block; float: left; padding-right: 10px; word-wrap: break-word; }
+
+nav.vertical ul li a { display: block; padding-top: 5px; padding-bottom: 5px; word-wrap: break-word; }
+
+nav ul li a:hover { text-decoration: none; }
+
+header {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 5px;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 1.8em;
+  font-family: Merriweather;
+}
+
+h2 {
+  font-size: 1.625em;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-family: SlaboArial;
+}
+
+h4 {
+  font-size: 1.375em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1.125em;
+  font-family: Roboto;
+}
+
+table {
+  background-color: transparent;
+}
+
+th {
+  text-align: left;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse !important;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+.radio-inline,
+.checkbox-inline {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.radio-inline input[type="radio"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-top: 4px;
+  margin-left: -20px;
+}
+
+/* Telefone em landscape e abaixo */
+@media (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+
+  .col-p-1, .col-p-2, .col-p-3, .col-p-4, .col-p-5, .col-p-6, .col-p-7, .col-p-8, .col-p-9, .col-p-10,
+  .col-m-1, .col-m-2, .col-m-3, .col-m-4, .col-m-5, .col-m-6, .col-m-7, .col-m-8, .col-m-9, .col-m-10,
+  .col-g-1, .col-g-2, .col-g-3, .col-g-4, .col-g-5, .col-g-6, .col-g-7, .col-g-8, .col-g-9, .col-g-10 {
+    width: 100%;
+  }
+}
+
+/* Telefone em landscape a tablet em portrait */
+@media (min-width: 481px) and (max-width: 767px) {
+  .container {
+    max-width: 750px;
+  }
+
+  .col-p-1, .col-p-2, .col-p-3,
+  .col-m-1, .col-m-2, .col-m-3,
+  .col-g-1, .col-g-2, .col-g-3 {
+    width: 25%;
+  }
+
+ .col-p-4, .col-p-5, .col-p-6,
+ .col-m-4, .col-m-5, .col-m-6,
+ .col-g-4, .col-g-5, .col-g-6 {
+    width: 50%;
+  }
+
+  .col-p-7, .col-p-8, .col-p-9,
+  .col-m-7, .col-m-8, .col-m-9,
+  .col-g-7, .col-g-8, .col-g-9 {
+    width: 75%;
+  }
+
+  .col-p-10, .col-m-10, .col-g-10 {
+    width: 100%;
+  }
+}
+
+/* Tablet em portrait a landscape e desktop */
+@media (min-width: 768px) {
+  .container {
+    max-width: 990px;
+  }
+}
+
+.test-grid [class*="col-"] {
+  padding: 10px;
+  border: 1px solid #D3D3D3;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.form-control::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #999;
+}
+.form-control::-webkit-input-placeholder {
+  color: #999;
+}
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: #eee;
+  opacity: 1;
+}
+.form-control[disabled],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+}
+textarea.form-control {
+  height: auto;
+}

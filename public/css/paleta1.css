@@ -1,0 +1,11 @@
+header, footer { background-color: #D3D3D3; }
+
+nav.horizontal { background-color: #90EE90; }
+
+nav.vertical { background-color: #ADD8E6; }
+
+aside { background-color: #FFFFE0; }
+
+table > tbody > tr:nth-of-type(odd) { background-color: #F5F5F5; }
+
+table > tbody > tr:hover { background-color: #E0E0E0; }

@@ -1,0 +1,21 @@
+* { color: #4682B4; }
+
+header, footer { background-color: #ADD8E6; }
+
+nav.horizontal { background-color: #4682B4; }
+
+nav.horizontal ul li a { color: #FFFFFF; }
+
+nav.vertical, aside { background-color: #E6E6FA; }
+
+h1, h2, h3, h4, h5, h6 { color: #A52A2A; }
+
+thead > tr { background-color: #4682B4; }
+
+thead > tr > th { color: #FFFFFF; }
+
+table > tbody > tr:nth-of-type(odd) { background-color: #E6E6FA; }
+
+table > tbody > tr:hover { background-color: #A52A2A; }
+
+table > tbody > tr:hover td { color: #FFFFFF; }
