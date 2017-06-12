@@ -114,11 +114,10 @@ class CarrosGrid extends Component {
     }
 
     adicionarCarro(fabricante, nome, motorizacao, potencia, comprimento, largura, entreeixos, ano, imagem) {
-        let data = new Date();
-        let idCarro = data.getTime();
+        let idCarro = new Date().getTime();
 
         const carro = {
-            idCarro,
+            id: idCarro,
             fabricante,
             nome,
             motorizacao,

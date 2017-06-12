@@ -107,32 +107,6 @@
       "largura": "1708 mm",
       "entreeixos": "2460 mm",
       "potencia": "93 cv"
-    },
-    {
-      "idCarro": "1497295407682",
-      "fabricante": "Fiat",
-      "nome": "Mobi",
-      "motorizacao": "1.3",
-      "potencia": "99 cv",
-      "comprimento": "4 m",
-      "largura": "1,7 m",
-      "entreeixos": "2,4 m",
-      "ano": "2016",
-      "imagem": "images/mobi.jpg",
-      "id": 10
-    },
-    {
-      "idCarro": "1497295753893",
-      "fabricante": "Fiat",
-      "nome": "Mobi Easy",
-      "motorizacao": "1.0",
-      "potencia": "79 cv",
-      "comprimento": "4 m",
-      "largura": "1,65 m",
-      "entreeixos": "2,45 m",
-      "ano": "2016",
-      "imagem": "images/mobi.jpg",
-      "id": 11
     }
   ]
 }
