@@ -63,7 +63,6 @@
   position: relative;
   min-height: 1px;
   padding: 0 10px;
-  float: left;
 }
 
 .col-p-10, .col-m-10, .col-g-10 {
@@ -105,7 +104,7 @@ nav ul { list-style-type: none; }
 
 nav ul li a { display: block; text-decoration: underline; text-align: center; word-wrap: break-word; }
 
-nav.horizontal ul li a { display: inline-block; float: left; padding-right: 10px; word-wrap: break-word; }
+nav.horizontal ul li a { display: inline-block; padding-right: 10px; word-wrap: break-word; }
 
 nav.vertical ul li a { display: block; padding-top: 5px; padding-bottom: 5px; word-wrap: break-word; }
 
