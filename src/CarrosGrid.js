@@ -17,7 +17,7 @@ class CarrosGrid extends Component {
             {
                 method: 'GET',
                 url: 'http://localhost:3001/carros/',
-                success: (carros) => { this.setState({ carros }) }
+                success: (carros) => { this.setState({ carros: carros }) }
             }
         );
     }
@@ -26,6 +26,7 @@ class CarrosGrid extends Component {
         super();
         this.state = {
             carros: [],
+            searchTxt: "",
             exibeGrid: true,
             exibeCadastro: false,
             exibeDetalhe: false,
@@ -43,7 +44,9 @@ class CarrosGrid extends Component {
             grid = <Grid key="gridCarros"
                 detalharCarro={this.detalharCarro.bind(this)}
                 removerCarro={this.removerCarro.bind(this)}
-                carros={this.state.carros} />;
+                carros={this.state.carros}
+                searchTxt={this.state.searchTxt}
+                onChangeSearch={this.handleSearch.bind(this)} />;
 
             botaoNovoCarro = <button key="novoCarroButton"
                 className="btn btn-primary"
@@ -108,13 +111,14 @@ class CarrosGrid extends Component {
                 carroDetalhado: {},
                 exibeDetalhe: false,
                 exibeCadastro: false,
-                exibeGrid: true
+                exibeGrid: true,
+                searchTxt: ""
             }
         );
     }
 
     adicionarCarro(fabricante, nome, motorizacao, potencia, comprimento, largura, entreeixos, ano, imagem) {
-        let idCarro = new Date().getTime();
+        const idCarro = new Date().getTime();
 
         const carro = {
             id: idCarro,
@@ -147,10 +151,16 @@ class CarrosGrid extends Component {
             data: carro
         }).done(function (msg) { });
 
-        this.setState(
-            { carros: this.state.carros.filter(carroItem => carroItem.id !== carro.id) }
-        );
+        this.setState({
+            carros: this.state.carros.filter(carroItem => carroItem.id !== carro.id)
+        });
 
+    }
+
+    handleSearch(searchTxt) {
+        this.setState({
+            searchTxt: searchTxt
+        });
     }
 }
 

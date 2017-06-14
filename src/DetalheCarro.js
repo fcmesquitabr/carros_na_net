@@ -17,7 +17,7 @@ class DetalheCarro extends Component {
                 </button>
                 <div className="panel panel-primary">
                     <div className="panel-heading">
-                        <h3 className="panel-title">Detalhes {this.props.fabricante + ' ' + this.props.nome}</h3>
+                        <h3 className="panel-title">Detalhes de {this.props.fabricante + ' ' + this.props.nome}</h3>
                     </div>
                     <div className="panel-body">
                         <div className="col-p-6 col-m-6 col-g-6" style={{ marginBottom: 10 + 'px' }}>

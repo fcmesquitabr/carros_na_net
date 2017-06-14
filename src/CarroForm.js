@@ -34,10 +34,10 @@ class CarroForm extends Component {
 
                 <div className="panel panel-primary">
                     <div className="panel-heading">
-                        <h3 className="panel-title">Cadastro Novo Carro</h3>
+                        <h3 className="panel-title">Cadastrar Novo Carro</h3>
                     </div>
                     <div className="panel-body">
-                        <form id="cadatroCarroForm" onSubmit={this.handleSubmit.bind(this)}>
+                        <form id="cadastroCarroForm" onSubmit={this.handleSubmit.bind(this)}>
                             <table className="table">
                                 <tbody>
                                     <tr>
@@ -74,7 +74,7 @@ class CarroForm extends Component {
                                     </tr>
                                     <tr>
                                         <td>Imagem</td>
-                                        <td><input type="text" className="form-control" ref={input => this.imagem = input} /></td>
+                                        <td><input type="file" accept="image/*" className="form-control" ref={input => this.imagem = input} /></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -103,7 +103,9 @@ class CarroForm extends Component {
         let largura = this.largura.value;
         let entreeixos = this.entreeixos.value;
         let ano = this.ano.value;
-        let imagem = "images/" + this.imagem.value;
+        let imagem = this.imagem.value;
+        let indice = (imagem.lastIndexOf("/") !== -1 ? imagem.lastIndexOf("/") : imagem.lastIndexOf("\\")) + 1;
+        imagem = "images/" + imagem.substr(indice);
 
         this.props.adicionarCarro(fabricante, nome, motorizacao, potencia, comprimento, largura, entreeixos, ano, imagem);
         this.setState({

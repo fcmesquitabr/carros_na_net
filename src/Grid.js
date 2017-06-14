@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CarroCard from './CarroCard';
+import CarroSearch from './CarroSearch';
 
 class Grid extends Component {
 
@@ -19,6 +20,8 @@ class Grid extends Component {
 
         return (
             <div>
+                <CarroSearch onChange={this.handleSearch.bind(this)} />
+                <br /><br />
                 {gridElements}
                 <div style={{ clear: 'both' }}></div>
             </div>
@@ -26,14 +29,27 @@ class Grid extends Component {
     }
 
     getCarrosCardArray() {
-        return this.props.carros.map(
-            carro => <CarroCard
-                detalharCarro={this.detalharCarro.bind(this)}
-                removerCarro={this.removerCarro.bind(this)}
-                key={carro.id} fabricante={carro.fabricante} carro={carro}
-                imagem={carro.imagem} nome={carro.nome}
-                motorizacao={carro.motorizacao} potencia={carro.potencia} />
-        );
+        const searchTxt = this.props.searchTxt.toLowerCase();
+        let carros = [];
+
+        this.props.carros.forEach(function (carro) {
+            if (searchTxt !== "" && carro.nome.toLowerCase().indexOf(searchTxt) === -1 &&
+                carro.fabricante.toLowerCase().indexOf(searchTxt) === -1) {
+                return;
+            }
+
+            carros.push(
+                <CarroCard
+                    detalharCarro={this.detalharCarro.bind(this)}
+                    removerCarro={this.removerCarro.bind(this)}
+                    key={carro.id} fabricante={carro.fabricante} carro={carro}
+                    imagem={carro.imagem} nome={carro.nome}
+                    motorizacao={carro.motorizacao} potencia={carro.potencia} />
+            );
+
+        }, this);
+
+        return carros;
     }
 
     detalharCarro(carro) {
@@ -42,6 +58,10 @@ class Grid extends Component {
 
     removerCarro(carro) {
         this.props.removerCarro(carro);
+    }
+
+    handleSearch(searchTxt) {
+        this.props.onChangeSearch(searchTxt);
     }
 }
 
